@@ -4,6 +4,14 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import streamlit as st
+import gdown
+
+
+model_path = "app/trained_model/plant_disease_model.h5"
+
+if not os.path.exists(model_path):
+    url = "https://drive.google.com/uc?id=YOUR_FILE_ID"
+    gdown.download(url, model_path, quiet=False)
 
 # -----------------------------------------------------------
 # 1️⃣ PATHS — Fixed for your actual folder structure
